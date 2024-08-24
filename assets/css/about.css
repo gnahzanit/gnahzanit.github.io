@@ -1,0 +1,54 @@
+body {
+    height: 100%;
+    /* overflow: scroll; */
+    /* Background stuff */
+    background-image: url('../images/background.png');
+    background-size: 13%;
+    background-repeat: repeat;
+    background-position: center; /* Start tiling from the center */
+    /* cursor: url('path/to/your/cursor-image.png'), auto */
+    overflow: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+}
+body::-webkit-scrollbar {
+    display: none; /* WebKit-based browsers */
+}
+
+/* Introduction */
+.introduction {
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    height: 300;
+    width: 1080px;
+    box-sizing: border-box;
+    padding: 120px 50px 20px 20px;
+}
+
+.left-image {
+    /* background-color: blue; */
+    width: 40%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Right Content Styling */
+.right-content {
+    width: 60%;
+    box-sizing: border-box;
+}
+.right-content p {
+    padding: 10px 5px;
+    font-size: 24px;
+    word-spacing: 2px;
+}
+
+.right-content .right-image {
+    width: 606px; /* Adjust size as needed */
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,11 @@
+body {
+    height: 100%;
+    overflow: hidden;
+    /* Background stuff */
+    background-image: url('../images/background.png');
+    /* #380404 */
+    background-size: 13%;
+    background-repeat: repeat;
+    background-position: center; /* Start tiling from the center */
+    /* cursor: url('path/to/your/cursor-image.png'), auto */
+}

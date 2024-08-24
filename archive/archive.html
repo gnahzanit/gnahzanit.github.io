@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+    <style>
+        @font-face {
+            font-family: 'DK Leftover Crayon'; /* Name the font */
+            src: url('assets/fonts/DKLeftoverCrayon-Regular.ttf') format('truetype'); /* Path to the font file */
+            font-weight: normal; /* You can specify normal, bold, etc. */
+            font-style: normal; /* You can specify normal, italic, etc. */
+        }
+
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .loading-text {
+            font-family: 'DK Leftover Crayon', Helvetica, Arial;
+            font-size: 1.5rem;
+            color: #fff;
+            letter-spacing: 20%;
+        }
+
+        .dot {
+            display: inline-block;
+            animation: blink 2.0s infinite;
+        }
+        .dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        @keyframes blink {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-overlay" id="loading-overlay">
+        <img src="assets/images/page-specific-images/loading-page/bird-loading.gif" alt="Loading GIF of a bird." width="200" height="150">
+        <div class="loading-text">
+            Loading<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span>
+        </div>
+    </div>
+    <script>
+        async function loadAssets() {
+            try {
+                // Fetch the list of assets
+                const response = await fetch('assets/list.json');
+                const assets = await response.json();
+
+                let loadedAssets = 0;
+
+                function assetLoaded() {
+                    loadedAssets++;
+                    if (loadedAssets === assets.length) {
+                        console.log("All assets loaded.");
+                        // All assets are loaded
+                        document.getElementById('loading-overlay').classList.add('hidden');
+                        setTimeout(() => {
+                            window.location.href = 'home.html'; // Redirect to the home page
+                        }, 500); // Delay for the transition
+                    }
+                }
+
+                function loadAsset(asset) {
+                    return new Promise((resolve, reject) => {
+                        const fileExtension = asset.split('.').pop();
+                        const assetUrl = `assets/${asset}`;
+
+                        if (['jpg', 'png', 'gif','PNG'].includes(fileExtension)) {
+                            const img = new Image();
+                            img.src = assetUrl;
+                            img.onload = assetLoaded;
+                            img.onerror = reject;
+                        } else if (fileExtension === 'css') {
+                            const link = document.createElement('link');
+                            link.rel = 'stylesheet';
+                            link.href = assetUrl;
+                            link.onload = assetLoaded;
+                            link.onerror = reject;
+                            document.head.appendChild(link);
+                        } else if (fileExtension === 'js') {
+                            const script = document.createElement('script');
+                            script.src = assetUrl;
+                            script.onload = assetLoaded;
+                            script.onerror = reject;
+                            document.body.appendChild(script);
+                        } else if (fileExtension === 'ttf') {
+                            // Handle font files
+                            const fontFace = new FontFace('CustomFont', `url(${assetUrl})`);
+                            fontFace.load()
+                                .then((loadedFontFace) => {
+                                    document.fonts.add(loadedFontFace);
+                                    assetLoaded();
+                                })
+                                .catch(reject);
+                        } else {
+                            console.log(assetUrl);
+                            resolve(); // For other types
+                        }
+                    });
+                }
+                await Promise.all(assets.map(asset => loadAsset(asset)));
+            } catch (error) {
+                console.error('Error loading assets:', error);
+                // Optionally handle errors
+            }
+        }
+
+        window.addEventListener('load', loadAssets);
+    </script>
+</body>
+</html>

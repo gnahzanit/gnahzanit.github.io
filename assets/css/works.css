@@ -1,0 +1,16 @@
+body {
+    height: 100%;
+    /* overflow: scroll; */
+    /* Background stuff */
+    background-image: url('../images/background.png');
+    background-size: 13%;
+    background-repeat: repeat;
+    background-position: center; /* Start tiling from the center */
+    /* cursor: url('path/to/your/cursor-image.png'), auto */
+    overflow: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+}
+body::-webkit-scrollbar {
+    display: none; /* WebKit-based browsers */
+}

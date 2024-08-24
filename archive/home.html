@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tina Zhang Website 🏠</title>
+    <link rel="icon" href="assets/images/website-logo.png" type="image/png">
+    <link rel="stylesheet" href="../assets/css/home.css">
+</head>
+<body>
+    <div class="padding">
+        <div class="contents">
+    <div class="title-and-cat">
+        <div class="title">
+            <div class="name">
+            <img id="tinazhang" alt="Tina Zhang" src="assets/images/page-specific-images/home-page/home-tina-zhang.gif">
+            </div>
+            <div id="curr">
+                <img id="uoft" alt="UofT Logo" src="assets/images/page-specific-images/home-page/home-uoft-logo.PNG">
+                <p>Honours Bachelor of Science in Computer Science Major, English & Mathematics Minor</p>
+            </div>
+        </div>
+        <div class="cat">
+            <img class="grab" alt="Fluffy the cat." id="fluffy" src="assets/images/page-specific-images/home-page/fluffy-unpet.PNG">
+        </div>
+    </div>
+
+    <div class="bottom">
+        <div class="subbottom">
+        <a id="bottom-component" href="about.html">
+        <div id="comp-flex">
+            <img class="icon" alt="GIF of a coffee cup." src="assets/images/page-specific-images/home-page/home-gif-about.gif">
+            <img class="section-name" alt="ABOUT" src="assets/images/page-specific-images/home-page/home-title-about.PNG">
+        </div>
+        </a>
+        <a id="bottom-component" href="work.html">
+        <div id="comp-flex">
+            <img class="icon" alt="GIF of a computer, a game console, and the figma icon." src="assets/images/page-specific-images/home-page/home-gif-work.gif">
+            <img class="section-name" alt="WORK" src="assets/images/page-specific-images/home-page/home-title-works.PNG">
+        </div>
+        </a>
+        <a id="bottom-component" href="art.html">
+        <div id="comp-flex">
+            <img class="icon" alt="GIF of various art pieces." src="assets/images/page-specific-images/home-page/home-gif-art.gif">
+            <img class="section-name" alt="ART" src="assets/images/page-specific-images/home-page/home-title-art.PNG">
+        </div>
+        </a>
+        </div>
+        <div class="contact" id="contact">
+            <div id="contact-inner-group">
+            <a id="contact-title" href="contact.html">
+            <img class="section-name" alt="CONTACT" src="assets/images/page-specific-images/home-page/home-title-contact.PNG">
+            </a>
+            <div id="info-inner-group">
+            <div id="contact-info">
+                <img class="icon-small" alt="Icon for email." src="assets/images/page-specific-images/home-page/home-icon-email.png">
+                <div id="text-box">
+                <a href="mailto:Tina.Yizhou.Zhang@gmail.com" rel="nofollow noopener noreferrer">Tina.Yizhou.Zhang@gmail.com</a>
+                </div>
+            </div>
+            <div id="contact-info">
+                <img class="icon-small" alt="Icon for linkedin." src="assets/images/page-specific-images/home-page/home-icon-linkedin.png"> 
+                <div id="text-box">
+                <a href="https://www.linkedin.com/in/tinayizhouzhang/" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+            </div>
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; <span id="copyright-year"></span> Tina Zhang. All rights reserved.</p>
+    </footer>
+</div>
+</div>
+    <script>
+        const image = document.getElementById('fluffy');
+        image.addEventListener('mouseover', () => {
+            image.src = 'assets/images/page-specific-images/home-page/fluffy-pet.PNG';
+        });
+        image.addEventListener('mouseout', () => {
+            image.src = 'assets/images/page-specific-images/home-page/fluffy-unpet.PNG';
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const year = new Date().getFullYear();
+            document.querySelector('#copyright-year').textContent = year;
+        });
+    </script>
+</body>
+</html>

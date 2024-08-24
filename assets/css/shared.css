@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'DK Leftover Crayon'; /* Name the font */
+    src: url('../fonts/DKLeftoverCrayon-Regular.ttf') format('truetype'); /* Path to the font file */
+    font-weight: normal; /* You can specify normal, bold, etc. */
+    font-style: normal; /* You can specify normal, italic, etc. */
+}
+@font-face {
+    font-family: 'Tina Title Font'; /* Name the font */
+    src: url('../fonts/TitleRegular-Regular.ttf') format('truetype'); /* Path to the font file */
+    font-weight: normal; /* You can specify normal, bold, etc. */
+    font-style: normal; /* You can specify normal, italic, etc. */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'DK Leftover Crayon', Helvetica, Arial;
+    color: white;
+    font-size: 1.1rem;
+}
+.grab {cursor: -webkit-grab; cursor: grab;}
+
+footer {
+    float:right;
+    /* text-align: center; */
+    /* color: #b0b0b0; */
+}
+footer p {
+    color: #b0b0b0;
+    letter-spacing: 1px;
+    opacity: 0.5;
+}
+#copyright-year {
+    color: #b0b0b0;
+    letter-spacing: 1px;
+    opacity: 0.5;
+}
+
+ .padding {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100wh;
+ }
+
+@media screen and (max-width: 870px) {
+    .padding {
+        display: none;
+    }
+    header {
+        display: none;
+    }
+    footer {
+        display: none;
+    }
+
+    .rez-handler {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 20% 0;
+    }
+    .rez-handler h1 {
+        min-width: 300px;
+        width: 500px;
+        height: auto;
+        font-family: 'Tina Title Font', Arial, Helvetica, sans-serif;
+        font-size: 50px;
+        padding: 5%;
+    }
+    .rez-handler p {
+        min-width: 300px;
+        width: 500px;
+        height: auto;
+        font-family: 'DK Leftover Crayon', Arial, Helvetica, sans-serif;
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 870px) {
+    .padding {
+        display: flex;
+    }
+    header {
+        display: block;
+    }
+    footer {
+        display: block;
+    }
+
+    .rez-handler {
+        display: none;
+    }
+}
