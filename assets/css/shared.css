@@ -55,32 +55,52 @@ footer p {
     footer {
         display: none;
     }
+    * {
+        background-color: white;
+    }
 
     .rez-handler {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 20% 0;
+        width: 100vw;
+        height: 100vh;
     }
     .rez-handler h1 {
-        min-width: 300px;
-        width: 500px;
-        height: auto;
+        width: 60%;
         font-family: 'Tina Title Font', Arial, Helvetica, sans-serif;
-        font-size: 50px;
+        font-size: 30px;
         padding: 5%;
+        color: #d05700;
     }
     .rez-handler p {
-        min-width: 300px;
-        width: 500px;
-        height: auto;
+        width: 60%;
         font-family: 'DK Leftover Crayon', Arial, Helvetica, sans-serif;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+        color: #35312e;
+    }
+    .rez-image {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;;
+    }
+    #small-text {
+        text-align:center;
+        vertical-align: middle;
+        display: table-cell;
+        font-size: 0.5rem;
+        width: 60%;
+        color: #b0b0b0;
     }
 }
 
 @media screen and (min-width: 870px) {
+    body {
+        background-image: url('../images/background.png');
+    }
     .padding {
         display: flex;
     }
