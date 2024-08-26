@@ -1,3 +1,24 @@
+const cursor = document.querySelector("[data-cursor]");
+
+window.addEventListener("mousemove", function(e) {
+  const posX = e.clientX;
+  const posY = e.clientY;
+
+  cursor.style.left = `${posX}px`;
+  cursor.style.top = `${posY}px`;
+})
+
+document.addEventListener('mouseover', (e) => {
+  console.log(e.target.id);
+  if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON') {
+    cursor.style.backgroundImage = `url('assets/images/mouse/fluffy-mouse-click.png')`;
+  } else if (e.target.id === 'fluffy'|| e.target.id === 'cursor-alt' || e.target.id === 'art-img' || e.target.id === 'works-img' || e.target.id === 'about-img' || e.target.id === 'contact-img' || e.target.id === 'home-img') {
+    cursor.style.backgroundImage = `url('assets/images/mouse/fluffy-mouse-click.png')`;
+  } else {
+    cursor.style.backgroundImage = `url('assets/images/mouse/fluffy-mouse.png')`;
+  }
+});
+
 const loader = document.getElementById("loading-screen");
 window.addEventListener("load", function(){
     loader.style.display = "none";

@@ -42,7 +42,7 @@
         width: 100%;;
     }
     #small-text {
-        text-align:center;
+        text-align: center;
         vertical-align: middle;
         display: table-cell;
         font-size: 0.5rem;
@@ -52,19 +52,6 @@
 }
 
 @media screen and (min-width: 870px) {
-    body {
-        background-image: url('../images/background.png');
-    }
-    .padding {
-        display: flex;
-    }
-    header {
-        display: block;
-    }
-    footer {
-        display: block;
-    }
-
     .rez-handler {
         display: none;
     }
