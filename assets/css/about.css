@@ -23,7 +23,7 @@ body::-webkit-scrollbar {
     height: 300;
     width: 1080px;
     box-sizing: border-box;
-    padding: 120px 50px 20px 20px;
+    padding: 110px 50px 20px 20px;
 }
 
 .left-image {

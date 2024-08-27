@@ -21,13 +21,13 @@
 }
 
 .cursor {
-    background-image: url('../images/mouse/fluffy-mouse.png');
+    background-image: url('../images/mouse/default-mouse.png');
     background-size: contain;
     background-repeat: no-repeat;
     object-fit: fill;
     position: fixed;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     top: 0;
     left: 0;
     transform: translate(-50%, -50%);

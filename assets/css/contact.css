@@ -1,6 +1,8 @@
 body {
     height: 100%;
-    overflow: scroll;
+    overflow: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
     /* Background stuff */
     background-image: url('../images/background.png');
     /* #380404 */
@@ -9,86 +11,138 @@ body {
     background-position: center; /* Start tiling from the center */
     /* cursor: url('path/to/your/cursor-image.png'), auto */
 }
+body::-webkit-scrollbar {
+  display: none; /* WebKit-based browsers */
+}
+
+#contact-me {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 110px 50px 20px 50px;
+}
+
+.upper-contact {
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+  flex-direction: column;
+  width: 80%;
+  box-sizing: border-box;
+}
 
 .contact-title {
-    font-family: 'Tina Title Font', Arial, Helvetica, sans-serif;
-    font-size: 100px;
-    text-align: left;
-    margin-bottom: 1.5rem;
-  }
+  font-family: 'Tina Title Font', Arial, Helvetica, sans-serif;
+  font-size: 100px;
+  text-align: left;
+  width: 100%;
+}
 
-  .contact-info {
-    margin-bottom: 1.5rem;
-  }
+.contact-info {
+  width: 100%;
+}
 
-  .contact-label {
-    font-size: 0.9em;
-    color: #666;
-  }
+.contact-label {
+  font-family: 'Tina Text Font', Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  letter-spacing: 5px;
+  color: #b0b0b0;
+  margin-bottom: 3px;
+}
 
-  .contact-detail {
-    font-size: 1.2em;
-    margin-bottom: 0.5rem;
-  }
+.contact-detail, .contact-detail a {
+  font-family: 'Tina Title Font', Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  color: #fff;
+  text-decoration: none;
+  width: 100%;
+  word-wrap: break-word;  /* Older name, still widely supported */
+  overflow-wrap: break-word;
+}
 
-  .contact-detail a {
-    color: #0073b1; /* LinkedIn blue color */
-    text-decoration: none;
-  }
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: top;
+  width: 80%;
+  margin-top: 1%;
+}
 
-  .contact-container {
-    display: flex;
-    align-items: flex-start;
-    margin-top: 2rem;
-  }
+.contact-img-cont {
+  width: 50%;
+  height: 320px;
+  margin-right: 2rem;
+  overflow: hidden;
+}
 
-  .contact-img {
-    width: 200px;
-    height: auto;
-    border-radius: 8px;
-    margin-right: 2rem;
-  }
+.contact-img-cont img{
+  width: 100%;
+  height: 100%;
+}
 
-  .contact-form-container {
-    flex: 1;
-  }
+.contact-form-container {
+  flex: 1;
+}
 
-  .form-title {
-    font-size: 1.5em;
-    margin-bottom: 1rem;
-  }
+.form-title {
+  font-size: 1.5em;
+  margin-bottom: 1rem;
+}
 
-  form {
-    display: flex;
-    flex-direction: column;
-  }
+form {
+  display: flex;
+  flex-direction: column;
+}
 
-  label {
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-  }
+input, textarea {
+  color: #b0b0b0;
+  margin-bottom: .75rem;
+  padding: 0.5rem;
+  border: 2px solid #b0b0b0;
+  border-radius: 13px;
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  -ms-border-radius: 13px;
+  -o-border-radius: 13px;
+}
 
-  input, textarea {
-    margin-bottom: 1rem;
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
+textarea {
+  resize: none;
+  overflow: hidden;
+}
 
-  textarea {
-    resize: vertical;
-  }
+#button-box {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
 
-  button {
-    padding: 0.75rem;
-    border: none;
-    border-radius: 4px;
-    background-color: #0073b1;
-    color: #fff;
-    cursor: pointer;
-    font-size: 1em;
-  }
+button {
+  float: right;
+  width: 30%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 15px;
+  background-color: #0073b1;
+  color: #fff;
+  font-family: 'Tina Title Font', Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  font-size: 30px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
 
-  button:hover {
-    background-color: #005a8c;
-  }
+button:hover {
+  background-color: #005a8c;
+}
+
+label {
+  letter-spacing: 4px;
+}

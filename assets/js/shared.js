@@ -10,13 +10,18 @@ window.addEventListener("mousemove", function(e) {
 
 document.addEventListener('mouseover', (e) => {
   console.log(e.target.id);
-  if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON') {
-    cursor.style.backgroundImage = `url('assets/images/mouse/fluffy-mouse-click.png')`;
-  } else if (e.target.id === 'fluffy'|| e.target.id === 'cursor-alt' || e.target.id === 'art-img' || e.target.id === 'works-img' || e.target.id === 'about-img' || e.target.id === 'contact-img' || e.target.id === 'home-img') {
-    cursor.style.backgroundImage = `url('assets/images/mouse/fluffy-mouse-click.png')`;
+  if (e.target.id === "fluffy") {
+    cursor.style.backgroundImage = `url('assets/images/mouse/fluffy-mouse.gif')`;
   } else {
-    cursor.style.backgroundImage = `url('assets/images/mouse/fluffy-mouse.png')`;
+    cursor.style.backgroundImage = `url('assets/images/mouse/default-mouse.png')`;
   }
+  // if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON') {
+  //   cursor.style.backgroundImage = `url('assets/images/mouse/fluffy-mouse-click.png')`;
+  // } else if (e.target.id === 'fluffy'|| e.target.id === 'cursor-alt' || e.target.id === 'art-img' || e.target.id === 'works-img' || e.target.id === 'about-img' || e.target.id === 'contact-img' || e.target.id === 'home-img') {
+  //   cursor.style.backgroundImage = `url('assets/images/mouse/fluffy-mouse-click.png')`;
+  // } else {
+  //   cursor.style.backgroundImage = `url('assets/images/mouse/fluffy-mouse.png')`;
+  // }
 });
 
 const loader = document.getElementById("loading-screen");

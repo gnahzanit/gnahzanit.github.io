@@ -39,48 +39,45 @@
         <div class="padding">
 <!-- Section: Contact Me -->
 <section id="contact-me">
+    <div class="upper-contact">
     <h2 class="contact-title">Contact me at:</h2>
     
     <div class="contact-info">
       <p class="contact-label">EMAIL</p>
-      <p class="contact-detail">tina.yizhou.zhang@gmail.com</p>
+      <p class="contact-detail"><a href="mailto:Tina.Yizhou.Zhang@gmail.com" rel="nofollow noopener noreferrer">Tina.Yizhou.Zhang@gmail.com</a></p>
     </div>
     
     <div class="contact-info">
       <p class="contact-label">LINKEDIN</p>
-      <p class="contact-detail"><a href="https://www.linkedin.com/in/tinayizhouzhang/" target="_blank">https://www.linkedin.com/in/tinayizhouzhang/</a></p>
+      <p class="contact-detail"><a href="https://www.linkedin.com/in/tinayizhouzhang/" target="_blank">https://www.linkedin.com/in/tinayizhouzhang</a></p>
     </div>
-    
+    </div>
     <div class="contact-container">
-      <img src="your-image.jpg" alt="" class="contact-img">
-      
+        <div class="contact-img-cont">
+            <img src="assets/images/page-specific-images/contact-page/contact-image.png" alt="Image besides the contact form." class="contact-img">
+        </div>
       <div class="contact-form-container">
-        <h3 class="form-title">CONTACT ME DIRECTLY</h3>
+        <h3 class="contact-label">CONTACT ME DIRECTLY</h3>
         
         <form id="contact-form">
-          <label for="name">Your Name</label>
-          <input type="text" id="name" name="name" required>
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required placeholder="Enter your name...">
           
-          <label for="email">Your Email</label>
-          <input type="email" id="email" name="email" required>
-          
-          <label for="message">Your Message</label>
-          <textarea id="message" name="message" maxlength="500" required></textarea>
-          
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" required 
+          pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" 
+          placeholder="Enter your email address...">
+            <!-- <span class="error-message" id="error-message"></span> -->
+          <label for="message">Your Message:</label>
+          <textarea id="message" name="message" maxlength="500" required placeholder="Enter your message, such as any business inquiries or feedback regarding my website :)..."></textarea>
+          <div id="button-box">
           <button type="submit">Submit</button>
+        </div>
         </form>
       </div>
     </div>
   </section>
-
-
-
-
-
-
-
-
-        </div>
+    </div>
     </main>
     <div class="loading-screen" id="loading-screen">
         <img src="assets/images/page-specific-images/loading-page/bird-loading.gif" alt="Loading GIF of a bird." width="200" height="150">
