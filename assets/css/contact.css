@@ -124,8 +124,8 @@ textarea {
 
 button {
   float: right;
-  width: 30%;
-  padding: 0.75rem;
+  width: 150px;
+  height: 40px;
   border: none;
   border-radius: 15px;
   background-color: #0073b1;

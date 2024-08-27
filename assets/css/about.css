@@ -52,3 +52,45 @@ body::-webkit-scrollbar {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+/* ABOUT ME STORY AND MY EXPERIENCES */
+.section-header {
+    font-size: 2em;
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .about-item, .games-meaning-item {
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0;
+  }
+
+  .about-text, .games-text {
+    flex: 1;
+    padding: 0 1rem;
+  }
+
+  .about-img, .games-img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .left-img {
+    margin-right: 1rem;
+  }
+
+  .right-img {
+    margin-left: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .about-item, .games-meaning-item {
+      flex-direction: column;
+    }
+
+    .left-img, .right-img {
+      margin: 0 0 1rem 0;
+    }
+  }

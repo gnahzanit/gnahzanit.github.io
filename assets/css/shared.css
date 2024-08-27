@@ -55,11 +55,11 @@ footer p {
     opacity: 0.5;
 }
 
- .padding {
+.padding {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
     height: 100%;
     width: 100wh;
- }
+}
