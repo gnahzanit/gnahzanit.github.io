@@ -26,7 +26,7 @@ body::-webkit-scrollbar {
     padding: 110px 50px 20px 20px;
 }
 
-.left-image {
+.my-face {
     /* background-color: blue; */
     width: 40%;
     box-sizing: border-box;
@@ -55,26 +55,68 @@ body::-webkit-scrollbar {
 
 /* ABOUT ME STORY AND MY EXPERIENCES */
 .section-header {
-    font-size: 2em;
+    font-family: 'Tina Title Font', Arial, Helvetica, sans-serif;
+    font-size: 120px;
     text-align: center;
-    margin: 2rem 0;
+    margin: 1rem 0;
   }
 
-  .about-item, .games-meaning-item {
+  .smaller-header {
+    font-family: 'Tina Title Font', Arial, Helvetica, sans-serif;
+    font-size: 90px;
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  .about-item {
+    width: 800px;
     display: flex;
     align-items: center;
     margin: 1.5rem 0;
   }
 
+#games-meaning {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.games-meaning-item {
+    width: 870px;
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .about-text, .games-text {
     flex: 1;
     padding: 0 1rem;
+    font-size: 24px;
   }
+
+  .games-text {
+    margin-bottom: 10px;
+  }
+
+  .games-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+  }
+
 
   .about-img, .games-img {
     width: 150px;
     height: auto;
     border-radius: 8px;
+  }
+
+#flipped {
+    transform: scaleX(-1);
   }
 
   .left-img {
@@ -85,12 +127,136 @@ body::-webkit-scrollbar {
     margin-left: 1rem;
   }
 
-  @media (max-width: 768px) {
-    .about-item, .games-meaning-item {
-      flex-direction: column;
-    }
 
-    .left-img, .right-img {
-      margin: 0 0 1rem 0;
-    }
+/* EXPERIENCE COMPONENETS STYLES */
+.project-card-section {
+    width: 870px;
+  }
+
+  .card {
+    /* background-color: #fff;
+    padding: 20px; */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-header {
+    position: relative;
+    height: 145px;
+  }
+
+  .card-header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+
+  .header-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .header-left-images {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+  }
+  
+  .header-image {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+  }
+  
+  .header-right-text {
+    position: absolute;
+    bottom: 55px;
+    right: 30px;
+    text-align: right;
+  }
+  
+.card-content {
+    background-color: #fff;
+    padding: 0px 0px 20px 20px;
+}
+
+  .role-title {
+    font-size: 24px;
+    color: #b0b0b0;
+  }
+  
+  .role-time {
+    font-size: 1em;
+    color: #4a4a4a;
+  }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .section-title img {
+    width: 60px;
+    height: 60px;
+  }
+
+
+  .section-title h2 {
+    font-family: 'Tina Title Font', Arial, Helvetica, sans-serif;
+    color: #2D2D2D;
+    font-size: 55px;
+  }
+
+  .overview-icon,
+  .contributions-icon,
+  .industry-icon {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+  }
+
+  .overview-image {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  .overview-text {
+    font-size: 1em;
+    margin-top: 10px;
+  }
+  
+  .contributions-section .contributions-blocks {
+    margin-top: 20px;
+  }
+  
+  .contribution-block {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .label-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .label-text {
+    font-size: 1.2em;
+  }
+  
+  .what-i-did-section,
+  .my-impacts-section,
+  .industry-prep-section {
+    margin-top: 20px;
+  }
+  
+  .industry-prep-text {
+    margin-top: 10px;
   }

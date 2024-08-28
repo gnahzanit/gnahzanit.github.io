@@ -53,3 +53,24 @@ changeImage('about-img', 'assets/images/navbar/about.png', 'assets/images/navbar
 changeImage('works-img', 'assets/images/navbar/works.png', 'assets/images/navbar/works-onhov.png');
 changeImage('art-img', 'assets/images/navbar/art.png', 'assets/images/navbar/art-onhov.png');
 changeImage('contact-img', 'assets/images/navbar/contact.png', 'assets/images/navbar/contact-onhov.png');
+
+
+window.addEventListener('scroll', () => {
+  const sections = document.querySelectorAll('section');
+  const scrollIndicatorLinks = document.querySelectorAll('.scroll-indicator a');
+
+  let currentSection = '';
+  sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      if (pageYOffset >= sectionTop - 60) {
+          currentSection = section.getAttribute('id');
+      }
+  });
+
+  scrollIndicatorLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('data-section') === currentSection) {
+          link.classList.add('active');
+      }
+  });
+});
