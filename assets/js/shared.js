@@ -3,17 +3,17 @@ const cursor = document.querySelector("[data-cursor]");
 window.addEventListener("mousemove", function(e) {
   const posX = e.clientX;
   const posY = e.clientY;
-
   cursor.style.left = `${posX}px`;
   cursor.style.top = `${posY}px`;
 })
 
 document.addEventListener('mouseover', (e) => {
+  // console.log(e.target.id);
   if (e.target.id === "fluffy") {
     cursor.style.backgroundImage = `url('assets/images/mouse/fluffy-mouse.gif')`;
   } else if (e.target.id === 'open-in-tab') {
     cursor.style.backgroundImage = `url('assets/images/mouse/open-in-tab-mouse.png')`;
-  } else if (e.target.id === 'cursor-alt' || e.target.id === 'art-img' || e.target.id === 'works-img' || e.target.id === 'about-img' || e.target.id === 'contact-img' || e.target.id === 'home-img') {
+  } else if (e.target.id === 'cursor-alt' || e.target.id === 'button-one' || e.target.id === 'button-two' || e.target.id === 'button-three' || e.target.id === 'art-img' || e.target.id === 'works-img' || e.target.id === 'about-img' || e.target.id === 'contact-img' || e.target.id === 'home-img') {
     cursor.style.backgroundImage = `url('assets/images/mouse/pointer-mouse.gif')`;
   } else {
     cursor.style.backgroundImage = `url('assets/images/mouse/default-mouse.png')`;

@@ -11,9 +11,8 @@ body {
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none;
 }
-body::-webkit-scrollbar {
-    display: none; /* WebKit-based browsers */
-}
+body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } /* Chrome */
+
 
 /* Introduction */
 .introduction {
@@ -163,13 +162,15 @@ body::-webkit-scrollbar {
   .header-left-images {
     position: absolute;
     bottom: 30px;
-    left: 20px;
+    left: 30px;
   }
   
-  .header-image {
-    width: 60px;
-    height: 60px;
+  .header-image-1 {
     margin-right: 10px;
+  }
+  .header-image-2 {
+    padding-left: 15px;
+    border-left: 2px solid #cccccc;
   }
   
   .header-right-text {
@@ -181,12 +182,13 @@ body::-webkit-scrollbar {
   
 .card-content {
     background-color: #fff;
-    padding: 0px 0px 20px 20px;
+    padding: 0px 30px;
 }
 
   .role-title {
     font-size: 24px;
     color: #b0b0b0;
+    opacity: 70%;
   }
   
   .role-time {
@@ -198,13 +200,13 @@ body::-webkit-scrollbar {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    margin-bottom: 10px;
   }
 
   .section-title img {
     width: 60px;
     height: 60px;
   }
-
 
   .section-title h2 {
     font-family: 'Tina Title Font', Arial, Helvetica, sans-serif;
@@ -215,32 +217,36 @@ body::-webkit-scrollbar {
   .overview-icon,
   .contributions-icon,
   .industry-icon {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     margin-left: 10px;
+    margin-right: 20px;
   }
 
-  .overview-image {
-    width: 100%;
-    height: auto;
-    margin-top: 10px;
+  .card-text {
+    font-size: 20px;
+    color: #2D2D2D;
+    margin-bottom: 10px;
   }
 
-  .overview-text {
-    font-size: 1em;
-    margin-top: 10px;
+  .overview-citation {
+    font-size: 10px;
+    color: #b0b0b0;
+    opacity: 50%;
+    margin-bottom: 10px;
   }
-  
   .contributions-section .contributions-blocks {
     margin-top: 20px;
   }
-  
-  .contribution-block {
+
+  .cb-label {
+    background-color: #4173B0;
     display: flex;
+    flex-direction: row;
     align-items: center;
-    margin-bottom: 10px;
+    justify-content: center;
   }
-  
+
   .label-icon {
     width: 20px;
     height: 20px;
@@ -251,12 +257,46 @@ body::-webkit-scrollbar {
     font-size: 1.2em;
   }
   
-  .what-i-did-section,
-  .my-impacts-section,
+  /* .what-i-did-section,
+  .my-impacts-section,*/
   .industry-prep-section {
     margin-top: 20px;
   }
   
+  .contribution-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: #FBF7F4;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+  
+  .cb-inner-content {
+    padding: 15px;
+  }
+  .wdid-title {
+    margin-top: 10px;
+    width: 100%;
+    float: left;
+    font-size: 35px;
+    font-family: 'Tina Title Font', Arial, Helvetica, sans-serif;
+    color: #638F87;
+  }
+
+  .mi-title {
+    width: 100%;
+    float: left;
+    font-size: 35px;
+    font-family: 'Tina Title Font', Arial, Helvetica, sans-serif;
+    color: #DE3838;
+  }
+
   .industry-prep-text {
     margin-top: 10px;
   }
