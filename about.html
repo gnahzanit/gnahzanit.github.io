@@ -55,14 +55,28 @@
           </div>
 
           <div class="scroll-indicator">
-            <!-- <div class="scroll-title">Table of Contents</div> -->
+            <div class="scroll-title">Contents</div>
             <a href="#about-me" data-section="about-me">About Me</a>
             <!-- <a href="#fun-facts" data-section="fun-facts">Fun Facts</a> -->
             <a href="#games-meaning" data-section="games-meaning">Games to Me</a>
-            <a href="#my-skills" data-section="my-skills">My Skills</a>
-            <a href="#experiences" data-section="experiences">My Experiences</a>
+            <a href="#my-skills" id="scroll-small-title" data-section="my-skills">My Skills</a>
+            <a href="#software-and-tools" data-section="software-and-tools">Software & Tools</a>
+            <a href="#technical-skills" data-section="technical-skills">Technical Skills</a>
+            <a href="#interpersonal-skills" data-section="interpersonal-skills">Interpersonal Skills</a>
+            <a href="#experiences" id="scroll-small-title" data-section="experiences">My Experiences</a>
             <a href="#blackberry" data-section="blackberry">Blackberry</a>
           </div>
+          <!-- <div class="scroll-indicator">
+            <div class="scroll-title">Contents</div>
+            <a href="#about-me" data-section="about-me">About Me</a>
+            <a href="#games-meaning" data-section="games-meaning">Games to Me</a>
+            <a href="#my-skills" data-section="my-skills">My Skills</a>
+            <a href="#software-and-tools" id="scroll-sub" data-section="software-and-tools">> Software &<br> Tools</a>
+            <a href="#technical-skills" id="scroll-sub" data-section="technical-skills">> Technical Skills</a>
+            <a href="#interpersonal-skills" id="scroll-sub" data-section="interpersonal-skills">> Interpersonal Skills</a>
+            <a href="#experiences" data-section="experiences">My Experiences</a>
+            <a href="#blackberry" id="scroll-sub" data-section="blackberry">> Blackberry</a>
+          </div> -->
           
 
           <section id="about-me">
@@ -146,8 +160,147 @@
 
         <section id="my-skills">
           <h2 class="section-header">MY SKILLS</h2>
-          <!-- Add content for experiences here -->
-      </section>
+          <div id="skills-section">
+            <div id="skills-section-content">
+            <section id="software-and-tools" class="skills-indiv-section">
+            <div id="skills-heading-container">
+            <h3 id="skills-heading" class="tools-heading">Software & Tools</h3>
+            </div>
+            <div id="skills-cards-container">
+                <div class="tools-skill-card" id="android-studio-adb-card">
+                    <img src="path_to_androidstudio_image" alt="Android Studio & Android Debug Bridge">
+                    <h3>Android Studio & Android Debug Bridge</h3>
+                    <p>Development environment & tool for building, debugging, and testing Android applications.</p>
+                </div>
+                <div class="tools-skill-card" id="clean-architecture-card">
+                    <img src="path_to_cleanarchitecture_image" alt="Clean Architecture & SOLID Design Principles">
+                    <h3>Clean Architecture & SOLID Design Principles</h3>
+                    <p>Software design principles for creating maintainable, scalable, and testable codebases.</p>
+                </div>
+                <div class="tools-skill-card" id="docker-card">
+                    <img src="path_to_docker_image" alt="Docker">
+                    <h3>Docker</h3>
+                    <p>Containerization platform & tool for building, shipping, and running distributed applications.</p>
+                </div>
+                <div class="tools-skill-card" id="doxygen-card">
+                    <img src="path_to_doxygen_image" alt="Doxygen">
+                    <h3>Doxygen</h3>
+                    <p>Documentation generator & tool that creates structured documentation from annotated source code in multiple programming languages, such as HTML.</p>
+                </div>
+                <div class="tools-skill-card" id="figma-card">
+                    <img src="path_to_figma_image" alt="Figma">
+                    <h3>Figma</h3>
+                    <p>Design tool & platform for creating and collaborating on user interface designs and prototypes in real-time.</p>
+                </div>
+                <div class="tools-skill-card" id="git-github-card">
+                    <img src="path_to_git_image" alt="Git & GitHub">
+                    <h3>Git & GitHub</h3>
+                    <p>Version control system & platform for managing and collaborating on code repositories.</p>
+                </div>
+                <div class="tools-skill-card" id="gitbook-card">
+                    <img src="path_to_gitbook_image" alt="GitBook">
+                    <h3>GitBook</h3>
+                    <p>Documentation platform & tool for creating, managing, and publishing user guides and knowledge bases with a collaborative approach.</p>
+                </div>
+                <div class="tools-skill-card" id="gitlab-yaml-card">
+                    <img src="path_to_gitlab_image" alt="GitLab CI/CD & YAML">
+                    <h3>GitLab CI/CD & YAML</h3>
+                    <p>Automation platform & configuration format used to define and execute continuous integration and deployment pipelines.</p>
+                </div>
+                <div class="tools-skill-card" id="gradle-unittest-card">
+                    <img src="path_to_gradleunittest_image" alt="Gradle Unit Test">
+                    <h3>Gradle Unit Test</h3>
+                    <p>Build tool & framework for automating the testing and integration of Java applications.</p>
+                </div>
+                <div class="tools-skill-card" id="hl7-fhir-card">
+                    <img src="path_to_hl7_image" alt="HL7 FHIR">
+                    <h3>HL7 FHIR</h3>
+                    <p>Healthcare interoperability standard & tool for exchanging electronic health information.</p>
+                </div>
+                <div class="tools-skill-card" id="java-card">
+                    <img src="path_to_java_image" alt="Java">
+                    <h3>Java</h3>
+                    <p>General-purpose programming language & platform for building cross-platform applications.</p>
+                </div>
+                <div class="tools-skill-card" id="javafx-fxml-gradle-card">
+                    <img src="path_to_javafx_image" alt="JavaFX & FXML, Gradle">
+                    <h3>JavaFX & FXML, Gradle</h3>
+                    <p>Java libraries & build tool for creating rich client applications with a modern UI.</p>
+                </div>
+                <div class="tools-skill-card" id="jira-card">
+                    <img src="path_to_jira_image" alt="Jira">
+                    <h3>Jira</h3>
+                    <p>Project management tool & software for tracking tasks and issues.</p>
+                </div>
+                <div class="tools-skill-card" id="js-html-css-card">
+                    <img src="path_to_jshtmlcss_image" alt="JavaScript, HTML, CSS">
+                    <h3>JavaScript, HTML, CSS</h3>
+                    <p>Core technologies & languages for building and styling websites and web applications.</p>
+                </div>
+                <div class="tools-skill-card" id="nodejs-restapi-card">
+                    <img src="path_to_nodejs_image" alt="Node.js, RESTful API, MS SQL, Unix Shell, FTP">
+                    <h3>Node.js, RESTful API, MS SQL, Unix Shell, FTP</h3>
+                    <p>JavaScript runtime & tools for building scalable server-side applications, interacting with databases, and managing files.</p>
+                </div>
+                <div class="tools-skill-card" id="oauth2-openidconnect-card">
+                    <img src="path_to_oauth_image" alt="OAuth2/OpenID Connect, SMART on FHIR">
+                    <h3>OAuth2/OpenID Connect, SMART on FHIR</h3>
+                    <p>Authentication protocols & framework for building secure, standardized healthcare applications.</p>
+                </div>
+                <div class="tools-skill-card" id="premiere-pro-card">
+                    <img src="path_to_premierepro_image" alt="Premiere Pro">
+                    <h3>Premiere Pro</h3>
+                    <p>Professional video editing software.</p>
+                </div>
+                <div class="tools-skill-card" id="python-beautifulsoup-card">
+                    <img src="path_to_python_image" alt="Python & Beautiful Soup">
+                    <h3>Python & Beautiful Soup</h3>
+                    <p>Programming language & web scraping tool that can extract data from HTML and XML documents.</p>
+                </div>
+                <div class="tools-skill-card" id="shopify-liquid-card">
+                    <img src="path_to_shopify_image" alt="Shopify Liquid">
+                    <h3>Shopify Liquid</h3>
+                    <p>Template language & tool used to create custom themes and dynamic content on Shopify.</p>
+                </div>
+                <div class="tools-skill-card" id="unity3d-arfoundation-card">
+                    <img src="path_to_unity3d_image" alt="Unity 3D & AR Foundation">
+                    <h3>Unity 3D & AR Foundation</h3>
+                    <p>Game development platform & AR toolkit for building interactive 3D and augmented reality experiences.</p>
+                </div>
+                <div class="tools-skill-card" id="xcode-swift-apple-card">
+                    <img src="path_to_xcode_image" alt="Xcode & Swift & Apple Developer Service">
+                    <h3>Xcode & Swift & Apple Developer Service</h3>
+                    <p>Integrated development environment & programming language for developing iOS and macOS applications.</p>
+                </div>
+            </div>
+          </section>
+          <section id="technical-skills" class="skills-indiv-section">
+            <div id="skills-heading-container">
+            <h3 id="skills-heading" class="technical-heading">Technical Skills</h3>
+            </div>
+            <div id="skills-cards-container">
+                <div class="tech-skill-card" id="android-studio-adb-card">
+                    <img src="path_to_androidstudio_image" alt="Android Studio & Android Debug Bridge">
+                    <h3>Android Studio & Android Debug Bridge</h3>
+                    <p>Development environment & tool for building, debugging, and testing Android applications.</p>
+                </div>
+            </div>
+          </section>
+          <section id="interpersonal-skills" class="skills-indiv-section">
+            <div id="skills-heading-container">
+            <h3 id="skills-heading" class="interpersonal-heading">Interpersonal Skills</h3>
+            </div>
+            <div id="skills-cards-container">
+                <div class="inter-skill-card" id="android-studio-adb-card">
+                    <img src="path_to_androidstudio_image" alt="Android Studio & Android Debug Bridge">
+                    <h3>Android Studio & Android Debug Bridge</h3>
+                    <p>Development environment & tool for building, debugging, and testing Android applications.</p>
+                </div>
+            </div>
+          </section>
+          </div>
+          </div>
+       </section>
         
         <!-- Section: MY EXPERIENCES -->
         <section id="experiences">
@@ -180,7 +333,7 @@
                 <img src="assets/images/experiences-work-file-images/magnifying-glass.png" class="overview-icon" alt="Overview icon.">
               </div>
               <img src="assets/images/page-specific-images/about-page/experience-content/bb-description.png" alt="Blackberry company overview image." width="100%" height="auto">
-              <p class="overview-citation">Image Taken: Mifsud, David, and Brett Francis. AWS and BlackBerry QNX join forces to accelerate auto innovation with BlackBerry IVY, a new intelligent vehicle data platform. AWS, 1 Dec. 2020, aws.amazon.com/blogs/industries/aws-and-blackberry-qnx-join-forces-to-accelerate-auto-innovation-with-blackberry-ivy-a-new-intelligent-vehicle-data-platform/.</p>
+              <p class="overview-citation">Image Taken: Mifsud, David, and Brett Francis. AWS and BlackBerry QNX join forces to accelerate auto innovation with BlackBerry IVY, a new intelligent vehicle data platform. AWS, 1 Dec. 2020, aws.amazon.com/blogs/industries/aws-and-blackberry-qnx-join-forces-to-accelerate-auto-innovation-with-blackberry-ivy-a-new-intelligent-vehicle-data-platform/.</p>
               <p class="card-text">BlackBerry IVY is a cloud-connected software platform developed collaboratively by BlackBerry Ltd and Amazon Web Services (AWS). Blackberry IVY enables automakers to securely process and analyze real-time vehicle sensor data, and supports the development of applications that enhance driver safety, vehicle performance, and predictive maintenance.</p>
             </div>
         

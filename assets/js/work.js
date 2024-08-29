@@ -20,3 +20,22 @@ function showContent(contentId) {
     });
     document.getElementById(contentId).classList.add('active');
 }
+
+
+
+document.addEventListener('scroll', function() {
+    const sections = document.querySelectorAll('section');
+    const scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+  
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+  
+      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+        document.querySelector(`nav a[href="#${section.id}"]`).classList.add('active');
+      } else {
+        document.querySelector(`nav a[href="#${section.id}"]`).classList.remove('active');
+      }
+    });
+  });
+  

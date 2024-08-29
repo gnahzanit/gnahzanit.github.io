@@ -111,7 +111,7 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } /* Ch
   .about-img, .games-img {
     width: 150px;
     height: auto;
-    border-radius: 8px;
+    /* border-radius: 8px; */
   }
 
 #flipped {
@@ -300,3 +300,171 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } /* Ch
   .industry-prep-text {
     margin-top: 10px;
   }
+
+
+
+
+
+/* SKILLS SECTION */
+
+#skills-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#skills-section-content {
+  /* background-color: #ca2053; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills-indiv-section {
+  /* background-color: orange; */
+  width: 100%;
+}
+
+#skills-heading-container {
+  /* background-color: greenyellow; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#skills-heading {
+  font-family: 'Tina Title Font', Arial, Helvetica, sans-serif;
+  font-size: 60px;
+  width: 80%;
+  text-align: left;
+  margin: 10px 0px;
+}
+
+.tools-heading {
+  color: #BB9ECC;
+}
+
+.technical-heading {
+  color: #4173B0;
+}
+
+.interpersonal-heading {
+  color: #D56D31;
+}
+
+#skills-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0% 10%;
+}
+
+.tools-skill-card {
+    width: 195px;
+    /*background-color: white;
+    border-radius: 10px;
+    *//*box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    */margin: 10px;
+    /*padding: 15px;
+    */text-align: center;
+    transition: transform 0.2s;
+    -webkit-transition: transform 0.2s;
+    -moz-transition: transform 0.2s;
+    -ms-transition: transform 0.2s;
+    -o-transition: transform 0.2s;
+}
+
+.tools-skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.tools-skill-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.tools-skill-card h3 {
+  font-family: 'Tina Title Font', 'Tina Text Font', Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #BB9ECC;
+}
+
+.tools-skill-card p {
+    font-size: 0.9em;
+    color: #fff;
+}
+
+.tech-skill-card {
+  width: 195px;
+  margin: 10px;
+  text-align: center;
+  transition: transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  -moz-transition: transform 0.2s;
+  -ms-transition: transform 0.2s;
+  -o-transition: transform 0.2s;
+}
+
+.tech-skill-card:hover {
+  transform: translateY(-5px);
+}
+
+.tech-skill-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.tech-skill-card h3 {
+  font-family: 'Tina Title Font', 'Tina Text Font', Arial, Helvetica, sans-serif;
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #4173B0;
+}
+
+.tech-skill-card p {
+  font-size: 0.9em;
+  color: #fff;
+}
+
+.inter-skill-card {
+  width: 195px;
+  margin: 10px;
+  text-align: center;
+  transition: transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  -moz-transition: transform 0.2s;
+  -ms-transition: transform 0.2s;
+  -o-transition: transform 0.2s;
+}
+
+.inter-skill-card:hover {
+  transform: translateY(-5px);
+}
+.inter-skill-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.inter-skill-card h3 {
+  font-family: 'Tina Title Font', 'Tina Text Font', Arial, Helvetica, sans-serif;
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #D56D31;
+}
+
+.inter-skill-card p {
+  font-size: 0.9em;
+  color: #fff;
+}
