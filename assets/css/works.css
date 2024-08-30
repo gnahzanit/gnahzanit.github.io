@@ -6,6 +6,7 @@ body {
     background-image: url('../images/background.png');
     background-size: 13%;
     background-repeat: repeat;
+    background-attachment: fixed;
     background-position: center; /* Start tiling from the center */
     /* cursor: url('path/to/your/cursor-image.png'), auto */
     overflow: auto;
@@ -64,7 +65,7 @@ body::-webkit-scrollbar {
     background: none;
     margin-left: 20px;
     margin-right: 20px;
-    background-color: pink;
+    /* background-color: pink; */
 }
 
 .display-button img {

@@ -63,7 +63,6 @@ body::-webkit-scrollbar {
     background: none;
     margin-left: 20px;
     margin-right: 20px;
-    background-color: pink;
 }
 
 .display-button img {
@@ -98,13 +97,18 @@ body::-webkit-scrollbar {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .gallery-image {
-    width: 100px;
-    height: 100px;
+    width: auto;
+    height: 400px;
     cursor: pointer;
-    object-fit: cover;
+    object-fit: fill;
+}
+#frogh {
+    height: 200px;
 }
 
 #lightbox {

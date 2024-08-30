@@ -6,6 +6,7 @@ body {
     /* #380404 */
     background-size: 13%;
     background-repeat: repeat;
+    background-attachment: fixed;
     background-position: center; /* Start tiling from the center */
     /* cursor: url('path/to/your/cursor-image.png'), auto */
 }
