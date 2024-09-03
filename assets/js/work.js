@@ -3,14 +3,32 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.getElementById('button-one').addEventListener('click', function() {
+  const clickEle = document.getElementById('sd-img');
+  clickEle.src = '../assets/images/wip1.png';
+  const otherEle1 = document.getElementById('ux-img');
+  otherEle1.src = '../assets/images/wip.png';
+  const otherEle2 = document.getElementById('gm-img');
+  otherEle2.src = '../assets/images/wip.png';
     showContent('content-one');
 });
 
 document.getElementById('button-two').addEventListener('click', function() {
+  const imgElement = document.getElementById('ux-img');
+  imgElement.src = '../assets/images/wip1.png';
+  const otherEle1 = document.getElementById('sd-img');
+  otherEle1.src = '../assets/images/wip.png';
+  const otherEle2 = document.getElementById('gm-img');
+  otherEle2.src = '../assets/images/wip.png';
     showContent('content-two');
 });
 
 document.getElementById('button-three').addEventListener('click', function() {
+  const imgElement = document.getElementById('gm-img');
+  imgElement.src = '../assets/images/wip1.png';
+  const otherEle1 = document.getElementById('ux-img');
+  otherEle1.src = '../assets/images/wip.png';
+  const otherEle2 = document.getElementById('sd-img');
+  otherEle2.src = '../assets/images/wip.png';
     showContent('content-three');
 });
 
