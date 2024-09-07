@@ -8,24 +8,15 @@ window.addEventListener("mousemove", function(e) {
 })
 
 document.addEventListener('mouseover', (e) => {
-  // console.log(e.target.id);
   if (e.target.id === "fluffy") {
     cursor.style.backgroundImage = `url('assets/images/mouse/fluffy-mouse.gif')`;
-  } else if (e.target.id === 'open-in-tab') {
+  } else if (e.target.id === 'open-in-tab' || e.target.classList.contains('ep-proj-links')) {
     cursor.style.backgroundImage = `url('assets/images/mouse/open-in-tab-mouse.png')`;
   } else if (e.target.id === 'cursor-alt' || e.target.id === 'button-one' || e.target.id === 'button-two' || e.target.id === 'button-three' || e.target.id === 'art-img' || e.target.id === 'works-img' || e.target.id === 'about-img' || e.target.id === 'contact-img' || e.target.id === 'home-img') {
     cursor.style.backgroundImage = `url('assets/images/mouse/pointer-mouse.gif')`;
   } else {
     cursor.style.backgroundImage = `url('assets/images/mouse/default-mouse.png')`;
   }
-  
-  // if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON') {
-  //   cursor.style.backgroundImage = `url('assets/images/mouse/fluffy-mouse-click.png')`;
-  // } else if (e.target.id === 'fluffy'|| e.target.id === 'cursor-alt' || e.target.id === 'art-img' || e.target.id === 'works-img' || e.target.id === 'about-img' || e.target.id === 'contact-img' || e.target.id === 'home-img') {
-  //   cursor.style.backgroundImage = `url('assets/images/mouse/fluffy-mouse-click.png')`;
-  // } else {
-  //   cursor.style.backgroundImage = `url('assets/images/mouse/fluffy-mouse.png')`;
-  // }
 });
 
 const loader = document.getElementById("loading-screen");
@@ -53,24 +44,3 @@ changeImage('about-img', 'assets/images/navbar/about.png', 'assets/images/navbar
 changeImage('works-img', 'assets/images/navbar/works.png', 'assets/images/navbar/works-onhov.png');
 changeImage('art-img', 'assets/images/navbar/art.png', 'assets/images/navbar/art-onhov.png');
 changeImage('contact-img', 'assets/images/navbar/contact.png', 'assets/images/navbar/contact-onhov.png');
-
-
-window.addEventListener('scroll', () => {
-  const sections = document.querySelectorAll('section');
-  const scrollIndicatorLinks = document.querySelectorAll('.scroll-indicator a');
-
-  let currentSection = '';
-  sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      if (pageYOffset >= sectionTop - 60) {
-          currentSection = section.getAttribute('id');
-      }
-  });
-
-  scrollIndicatorLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('data-section') === currentSection) {
-          link.classList.add('active');
-      }
-  });
-});

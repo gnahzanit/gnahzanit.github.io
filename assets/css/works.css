@@ -18,7 +18,7 @@ body::-webkit-scrollbar {
 }
 
 
-#section-container {
+#main-container {
     text-align: center;
     width: 90%;
     min-width: 870px;
@@ -58,7 +58,7 @@ body::-webkit-scrollbar {
     margin-bottom: 30px;
 }
 
-.display-button {
+.nav-button {
     display: inline-block;
     text-align: center;
     border: none;
@@ -68,7 +68,7 @@ body::-webkit-scrollbar {
     /* background-color: pink; */
 }
 
-.display-button img {
+.nav-button img {
     width: 200px;
     height: 200px;
 }
@@ -79,7 +79,8 @@ body::-webkit-scrollbar {
     color: #fff;
 }
 
-#content-container {
+.content {
+    display: none;
     width: 100%;
     margin-top: 20px;
 }
@@ -91,4 +92,10 @@ body::-webkit-scrollbar {
 
 .content-item.active {
     display: block;
+}
+
+.content-parent {
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
 }
