@@ -2,7 +2,7 @@ body {
     height: 100%;
     /* overflow: scroll; */
     /* Background stuff */
-    background-image: url('../images/background.png');
+    background-image: url('../images/background.png'); 
     background-size: 13%;
     background-repeat: repeat;
     background-attachment: fixed;
@@ -43,6 +43,8 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } /* Ch
     padding: 10px 5px;
     font-size: 24px;
     word-spacing: 2px;
+    text-shadow:  0 2px 8px rgba(0, 0, 0, 1);
+
 }
 
 .right-content .right-image {
@@ -90,10 +92,11 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } /* Ch
     align-items: center;
   }
 
-  .about-text, .games-text {
+  .about-text, .games-text, .ff-text {
     flex: 1;
     padding: 0 1rem;
     font-size: 24px;
+    text-shadow:  0 2px 8px rgba(0, 0, 0, 1);
   }
 
   .games-text {
@@ -169,6 +172,8 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } /* Ch
   width: 80%;
   text-align: left;
   margin: 10px 0px;
+  text-shadow:  0 2px 8px rgba(0, 0, 0, 0.1);
+
 }
 
 .tools-heading {
@@ -190,11 +195,26 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } /* Ch
     padding: 0% 10%;
 }
 
+
+.tools-skill-card h3, .tech-skill-card h3, .inter-skill-card h3 {
+  font-family: 'Tina Title Font', 'Tina Text Font', Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-shadow:  0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tools-skill-card p, .tech-skill-card p, .inter-skill-card p {
+  font-size: 0.9em;
+  color: #fff;
+  text-shadow:  0 2px 8px rgba(0, 0, 0, 1);
+}
+
+
 .tools-skill-card {
     width: 195px;
     /*background-color: white;
     border-radius: 10px;
-    *//*box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    /*box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     */margin: 10px;
     /*padding: 15px;
     */text-align: center;
@@ -217,15 +237,7 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } /* Ch
 }
 
 .tools-skill-card h3 {
-  font-family: 'Tina Title Font', 'Tina Text Font', Arial, Helvetica, sans-serif;
-    font-size: 28px;
-    margin-bottom: 10px;
     color: #BB9ECC;
-}
-
-.tools-skill-card p {
-    font-size: 0.9em;
-    color: #fff;
 }
 
 .tech-skill-card {
@@ -251,15 +263,7 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } /* Ch
 }
 
 .tech-skill-card h3 {
-  font-family: 'Tina Title Font', 'Tina Text Font', Arial, Helvetica, sans-serif;
-  font-size: 28px;
-  margin-bottom: 10px;
   color: #4286c6;
-}
-
-.tech-skill-card p {
-  font-size: 0.9em;
-  color: #fff;
 }
 
 .inter-skill-card {
@@ -284,13 +288,6 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } /* Ch
 }
 
 .inter-skill-card h3 {
-  font-family: 'Tina Title Font', 'Tina Text Font', Arial, Helvetica, sans-serif;
-  font-size: 28px;
-  margin-bottom: 10px;
   color: #e46517;
 }
 
-.inter-skill-card p {
-  font-size: 0.9em;
-  color: #fff;
-}
