@@ -475,3 +475,15 @@ footer p {
   /* .industry-prep-text {
     margin-top: 10px;
   } */
+
+  .ep-order-by-column {
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .ep-order-by-row {
+    display: flex;
+    flex-direction: row;
+    
+  }

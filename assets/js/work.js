@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function() {
   function scrollToSectionWithOffset(sectionId) {
     // const section = document.getElementById(sectionId);
     const offset = 90; // Desired offset from the top
-    console.log("what the fuck man", sectionId);
 
     switch(sectionId) {
         case 'onionshop':
@@ -43,11 +42,21 @@ document.addEventListener("DOMContentLoaded", function() {
         case 'thevoid':
             // Scroll to the position
             window.scrollTo({
-                top: 646,
+                top: 580,
                 behavior: 'smooth'
             });
             break;
-        case '':
+        case 'wan':
+            window.scrollTo({
+                top: 3215,
+                behavior: 'smooth'
+            });
+            break;
+        case 'cctm':
+            window.scrollTo({
+                top: 5120,
+                behavior: 'smooth'
+            });
             break;
         default:
             break;
@@ -178,4 +187,3 @@ document.addEventListener("DOMContentLoaded", function() {
 //       }
 //     });
 //   });
-  
