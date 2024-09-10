@@ -75,6 +75,7 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } /* Ch
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
 }
 .about-text-container {
     width: 600px;
