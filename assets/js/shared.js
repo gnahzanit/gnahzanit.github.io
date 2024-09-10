@@ -15,7 +15,8 @@ document.addEventListener('mouseover', (e) => {
   } else if (e.target.id === 'cursor-alt' || e.target.id === 'button-one' || e.target.id === 'button-two' || e.target.id === 'button-three' || e.target.id === 'art-img' || e.target.id === 'works-img' || e.target.id === 'about-img' || e.target.id === 'contact-img' || e.target.id === 'home-img') {
     cursor.style.backgroundImage = `url('assets/images/mouse/pointer-mouse.gif')`;
   } else {
-    cursor.style.backgroundImage = `url('assets/images/mouse/default-mouse.png')`;
+    // cursor.style.backgroundImage = `url('assets/images/mouse/default-mouse.png')`;
+    cursor.style.backgroundImage = `url('assets/images/mouse/fluffy-mouse.gif')`;
   }
 });
 

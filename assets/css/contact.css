@@ -30,7 +30,9 @@ body::-webkit-scrollbar {
 .upper-contact {
   display: flex;
   align-items: flex-start;
-  justify-content: left;
+  /* justify-content: left; */
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   width: 80%;
   box-sizing: border-box;
@@ -44,7 +46,13 @@ body::-webkit-scrollbar {
 }
 
 .contact-info {
+  margin-top: 30px;
   width: 100%;
+  /* display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; */
 }
 
 .contact-label {

@@ -69,49 +69,25 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } /* Ch
     margin: 1rem 0;
   }
 
-  .about-item {
-    width: 800px;
-    display: flex;
-    align-items: center;
-    margin: 1.5rem 0;
-  }
-
-#games-meaning {
+.about-container {
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
-
-.games-meaning-item {
-    width: 870px;
-    margin: 1.5rem 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .about-text, .games-text, .ff-text {
+.about-text-container {
+    width: 600px;
+}
+  .about-text, .ff-text {
     flex: 1;
     padding: 0 1rem;
     font-size: 24px;
     text-shadow:  0 2px 8px rgba(0, 0, 0, 1);
+    text-wrap: wrap;
   }
 
-  .games-text {
-    margin-bottom: 10px;
-  }
-
-  .games-text-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: flex-start;
-  }
-
-
-  .about-img, .games-img {
+  .about-img {
     width: 150px;
     height: auto;
     /* border-radius: 8px; */

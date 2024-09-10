@@ -41,9 +41,14 @@
 }
 
 footer {
-    float:right;
+    /* float:right; */
     /* text-align: center; */
     /* color: #b0b0b0; */
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 0.5em;
+    text-align: center;
 }
 footer p {
     color: #b0b0b0;
