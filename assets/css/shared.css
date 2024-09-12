@@ -484,15 +484,13 @@ footer p {
   .ep-order-by-column {
     display: flex;
     flex-direction: column;
-    
   }
 
   .ep-order-by-row {
     display: flex;
     flex-direction: row;
-    
   }
 
-  .loading-screen:hover {
+  .loading-screen {
     cursor: default;
   }
