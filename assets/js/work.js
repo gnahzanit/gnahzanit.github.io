@@ -57,6 +57,12 @@ document.addEventListener("DOMContentLoaded", function() {
                   behavior: 'smooth'
               });
               break;
+              case 'phisherman':
+                window.scrollTo({
+                    top: 6680,
+                    behavior: 'smooth'
+                });
+                break;
           default:
               break;
       }
@@ -103,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const activeContentId = document.querySelector('.content[style*="block"]').id;
   
         document.querySelectorAll(`#${activeContentId} section`).forEach(section => {
-          console.log(section.id, section.getBoundingClientRect());
+        //   console.log(section.id, section.getBoundingClientRect());
             const rect = section.getBoundingClientRect();
               if (rect.top >= 0 && rect.top <= window.innerHeight/1.5) {
                 updateUrl(activeButtonId, section.id);
