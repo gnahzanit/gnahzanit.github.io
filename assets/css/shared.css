@@ -17,7 +17,7 @@
     font-family: 'Tina Text Font', Helvetica, Arial;
     color: white;
     font-size: 1.1rem;
-    cursor: none;
+    /* cursor: none; */
     /* scroll-behavior: smooth; */
 }
 
@@ -491,6 +491,6 @@ footer p {
     flex-direction: row;
   }
 
-  .loading-screen {
+  /* .loading-screen {
     cursor: default;
-  }
+  } */
