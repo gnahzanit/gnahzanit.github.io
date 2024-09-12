@@ -492,3 +492,7 @@ footer p {
     flex-direction: row;
     
   }
+
+  .loading-screen:hover {
+    cursor: default;
+  }
