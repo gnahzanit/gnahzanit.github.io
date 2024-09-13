@@ -1,3 +1,34 @@
+const channel = new BroadcastChannel('preload-channel');
+
+// Check if the image has been preloaded
+if (!localStorage.getItem('imagePreloaded')) {
+    preloadImage();
+    localStorage.setItem('imagePreloaded', 'true');
+    channel.postMessage('imagePreloaded');
+} else {
+    console.log('Image already preloaded in this tab.');
+}
+
+// Listen for messages from other tabs
+channel.onmessage = (event) => {
+    if (event.data === 'imagePreloaded') {
+        console.log('Image preloaded in another tab.');
+    }
+};
+
+// Function to preload the image
+function preloadImage() {
+    const img = new Image();
+    img.src = 'assets/images/page-specific-images/loading-page/bird-loading.gif';
+    img.onload = () => {
+        console.log('Image preloaded.');
+    };
+}
+
+
+
+
+
 const cursor = document.querySelector("[data-cursor]");
 
 window.addEventListener("mousemove", function(e) {
