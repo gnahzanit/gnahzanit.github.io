@@ -496,8 +496,9 @@ footer p {
   } */
 
   #progress-bar {
-    width: 100px;
-    height: 20px;
+    margin-top: 20px;
+    width: 200px;
+    height: 15px;
     background-color: #f3f3f3;
     border: 1px solid #ccc;
     border-radius: 10px;
