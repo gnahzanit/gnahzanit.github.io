@@ -496,16 +496,24 @@ footer p {
   } */
 
   #progress-bar {
-    width: 80%;
+    width: 100px;
     height: 20px;
     background-color: #f3f3f3;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
 #progress-bar-fill {
     width: 0;
     height: 100%;
-    background-color: #4caf50;
-    border-radius: 5px;
+    background-color: #a6a6a6;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
