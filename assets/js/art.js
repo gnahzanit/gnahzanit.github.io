@@ -1,17 +1,20 @@
-document.addEventListener('DOMContentLoaded', function () {
-    showContent('content-one');
-});
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('button-one').addEventListener('click', function() {
+        changeButtonImage('image-one', 'assets/images/website-logo.png');
+        showContent('content-one');
+    });
 
-document.getElementById('button-one').addEventListener('click', function() {
-    showContent('content-one');
-});
+    document.getElementById('button-two').addEventListener('click', function() {
+        changeButtonImage('image-two', 'assets/images/website-logo.png');
+        showContent('content-two');
+    });
 
-document.getElementById('button-two').addEventListener('click', function() {
-    showContent('content-two');
-});
+    document.getElementById('button-three').addEventListener('click', function() {
+        changeButtonImage('image-three', 'assets/images/website-logo.png');
+        showContent('content-three');
+    });
 
-document.getElementById('button-three').addEventListener('click', function() {
-    showContent('content-three');
+    showContent('content-one'); // Show default content on load
 });
 
 function showContent(contentId) {
@@ -21,36 +24,12 @@ function showContent(contentId) {
     document.getElementById(contentId).classList.add('active');
 }
 
+function changeButtonImage(imageId, activeImage) {
+    // Reset all button images to default
+    document.getElementById('image-one').src = 'assets/images/wip-inv.png'; // Default image for button one
+    document.getElementById('image-two').src = 'assets/images/wip-inv.png'; // Default image for button two
+    document.getElementById('image-three').src = 'assets/images/wip-inv.png'; // Default image for button three
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     const lightbox = document.getElementById('lightbox');
-//     const lightboxImage = document.getElementById('lightbox-image');
-//     const closeBtn = document.getElementById('close-btn');
-//     const prevBtn = document.getElementById('prev-btn');
-//     const nextBtn = document.getElementById('next-btn');
-//     const galleryImages = Array.from(document.querySelectorAll('.gallery-image'));
-//     let currentIndex = 0;
-
-//     galleryImages.forEach((image, index) => {
-//         image.addEventListener('click', () => {
-//             lightbox.classList.remove('hidden');
-//             lightboxImage.src = image.src.replace('thumbnail', 'large'); // Assuming you have large versions of the images
-//             currentIndex = index;
-//         });
-//     });
-
-//     closeBtn.addEventListener('click', () => {
-//         lightbox.classList.add('hidden');
-//     });
-
-//     prevBtn.addEventListener('click', () => {
-//         currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-//         lightboxImage.src = galleryImages[currentIndex].src.replace('thumbnail', 'large');
-//     });
-
-//     nextBtn.addEventListener('click', () => {
-//         currentIndex = (currentIndex + 1) % galleryImages.length;
-//         lightboxImage.src = galleryImages[currentIndex].src.replace('thumbnail', 'large');
-//     });
-// });
-
+    // Change the clicked button's image to the active image
+    document.getElementById(imageId).src = activeImage;
+}

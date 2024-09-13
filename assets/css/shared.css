@@ -491,30 +491,6 @@ footer p {
     flex-direction: row;
   }
 
-  /* .loading-screen {
+  .loading-screen {
     cursor: default;
-  } */
-
-  #progress-bar {
-    margin-top: 20px;
-    width: 200px;
-    height: 15px;
-    background-color: #f3f3f3;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-}
-
-#progress-bar-fill {
-    width: 0;
-    height: 100%;
-    background-color: #a6a6a6;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-}
+  }

@@ -1,5 +1,4 @@
 const channel = new BroadcastChannel('preload-channel');
-const progressBarFill = document.getElementById('progress-bar-fill');
 
 // Check if assets are already loaded
 if (!localStorage.getItem('assetsPreloaded')) {
@@ -25,7 +24,6 @@ async function loadAssets() {
 
         function assetLoaded() {
             loadedAssets++;
-            updateProgressBar(loadedAssets, assets.length);
             if (loadedAssets === assets.length) {
                 console.log("All assets loaded.");
                 document.getElementById('loading-container').classList.add('hidden');
@@ -36,7 +34,12 @@ async function loadAssets() {
         function loadAsset(asset) {
             return new Promise((resolve, reject) => {
                 const fileExtension = asset.split('.').pop().toLowerCase();
-                const assetUrl = `assets/${asset}`;
+                const assetUrl = `${asset}`;
+
+                if (asset.toLowerCase().includes('.ds_store')) {
+                    resolve(); // Ignore .DS_Store files
+                    return;
+                }
 
                 if (['jpg', 'png', 'gif', 'jpeg', 'bmp', 'svg', 'webp'].includes(fileExtension)) {
                     const img = new Image();
@@ -68,6 +71,13 @@ async function loadAssets() {
                         document.fonts.add(loadedFontFace);
                         assetLoaded();
                     }).catch(reject);
+                } else if (fileExtension === 'pdf') {
+                    const pdfRequest = new XMLHttpRequest();
+                    pdfRequest.open('GET', assetUrl, true);
+                    pdfRequest.responseType = 'blob';
+                    pdfRequest.onload = assetLoaded;
+                    pdfRequest.onerror = reject;
+                    pdfRequest.send();
                 } else {
                     console.log(`${assetUrl} not recognized as a loadable asset.`);
                     resolve();
@@ -80,14 +90,6 @@ async function loadAssets() {
         console.error('Error loading assets:', error);
     }
 }
-
-// Function to update the progress bar
-function updateProgressBar(loadedAssets, totalAssets) {
-    const percentLoaded = (loadedAssets / totalAssets) * 100;
-    progressBarFill.style.width = percentLoaded + '%';
-}
-
-
 
 
 
@@ -124,13 +126,16 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 function changeImage(id, oldSrc, newSrc) {
-const image = document.getElementById(id);
-image.addEventListener('mouseover', function() {
-  this.src = newSrc;
-});
-image.addEventListener('mouseout', function() {
-    this.src = oldSrc;
-  });
+    const image = document.getElementById(id);
+
+    if (image) {
+        image.addEventListener('mouseover', function() {
+        this.src = newSrc;
+        });
+        image.addEventListener('mouseout', function() {
+            this.src = oldSrc;
+        });
+    }
 }
 
 changeImage('home-img', 'assets/images/navbar/home.png', 'assets/images/navbar/home-onhov.png');
