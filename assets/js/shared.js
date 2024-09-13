@@ -1,28 +1,90 @@
 const channel = new BroadcastChannel('preload-channel');
+const progressBarFill = document.getElementById('progress-bar-fill');
 
-// Check if the image has been preloaded
-if (!localStorage.getItem('imagePreloaded')) {
-    preloadImage();
-    localStorage.setItem('imagePreloaded', 'true');
-    channel.postMessage('imagePreloaded');
+// Check if assets are already loaded
+if (!localStorage.getItem('assetsPreloaded')) {
+    loadAssets(); // Preload assets
+    localStorage.setItem('assetsPreloaded', 'true');
+    channel.postMessage('assetsPreloaded'); // Notify other tabs
 } else {
-    console.log('Image already preloaded in this tab.');
+    console.log('Assets already preloaded.');
 }
 
 // Listen for messages from other tabs
 channel.onmessage = (event) => {
-    if (event.data === 'imagePreloaded') {
-        console.log('Image preloaded in another tab.');
+    if (event.data === 'assetsPreloaded') {
+        console.log('Assets preloaded in another tab.');
     }
 };
 
-// Function to preload the image
-function preloadImage() {
-    const img = new Image();
-    img.src = 'assets/images/page-specific-images/loading-page/bird-loading.gif';
-    img.onload = () => {
-        console.log('Image preloaded.');
-    };
+async function loadAssets() {
+    try {
+        const response = await fetch('assets/list.json');
+        const assets = await response.json();
+        let loadedAssets = 0;
+
+        function assetLoaded() {
+            loadedAssets++;
+            updateProgressBar(loadedAssets, assets.length);
+            if (loadedAssets === assets.length) {
+                console.log("All assets loaded.");
+                document.getElementById('loading-container').classList.add('hidden');
+                setTimeout(() => window.location.href = 'home.html', 500); // Redirect after loading
+            }
+        }
+
+        function loadAsset(asset) {
+            return new Promise((resolve, reject) => {
+                const fileExtension = asset.split('.').pop().toLowerCase();
+                const assetUrl = `assets/${asset}`;
+
+                if (['jpg', 'png', 'gif', 'jpeg', 'bmp', 'svg', 'webp'].includes(fileExtension)) {
+                    const img = new Image();
+                    img.src = assetUrl;
+                    img.onload = assetLoaded;
+                    img.onerror = reject;
+                } else if (['mp4', 'webm', 'ogg'].includes(fileExtension)) {
+                    const video = document.createElement('video');
+                    video.src = assetUrl;
+                    video.preload = 'auto';
+                    video.onloadeddata = assetLoaded;
+                    video.onerror = reject;
+                } else if (fileExtension === 'css') {
+                    const link = document.createElement('link');
+                    link.rel = 'stylesheet';
+                    link.href = assetUrl;
+                    link.onload = assetLoaded;
+                    link.onerror = reject;
+                    document.head.appendChild(link);
+                } else if (fileExtension === 'js') {
+                    const script = document.createElement('script');
+                    script.src = assetUrl;
+                    script.onload = assetLoaded;
+                    script.onerror = reject;
+                    document.body.appendChild(script);
+                } else if (['ttf', 'woff', 'woff2'].includes(fileExtension)) {
+                    const fontFace = new FontFace('CustomFont', `url(${assetUrl})`);
+                    fontFace.load().then((loadedFontFace) => {
+                        document.fonts.add(loadedFontFace);
+                        assetLoaded();
+                    }).catch(reject);
+                } else {
+                    console.log(`${assetUrl} not recognized as a loadable asset.`);
+                    resolve();
+                }
+            });
+        }
+
+        await Promise.all(assets.map(asset => loadAsset(asset)));
+    } catch (error) {
+        console.error('Error loading assets:', error);
+    }
+}
+
+// Function to update the progress bar
+function updateProgressBar(loadedAssets, totalAssets) {
+    const percentLoaded = (loadedAssets / totalAssets) * 100;
+    progressBarFill.style.width = percentLoaded + '%';
 }
 
 

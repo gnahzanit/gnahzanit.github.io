@@ -7,7 +7,8 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "dev": "live-server --watch=assets",
+    "generate-assets": "node startup-codes.js",
+    "dev": "npm run generate-assets && live-server --watch=assets",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
