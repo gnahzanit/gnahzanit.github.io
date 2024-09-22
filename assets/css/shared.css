@@ -21,6 +21,7 @@
     /* scroll-behavior: smooth; */
 }
 
+
 .cursor {
     background-image: url('../images/mouse/default-mouse.png');
     background-size: contain;
