@@ -7,12 +7,14 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "generate-assets": "node startup-codes.js",
-    "dev": "npm run generate-assets && live-server --watch=assets",
+    "dev": "vite",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "animejs": "^3.2.2",
     "gsap": "^3.12.5",
+    "locomotive-scroll": "^4.1.4",
+    "split-type": "^0.3.4",
     "three": "^0.167.1",
     "vite": "^5.4.2"
   }

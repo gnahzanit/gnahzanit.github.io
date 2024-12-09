@@ -1,202 +1,274 @@
-body {
-    height: 100%;
-    overflow: hidden;
-    /* Background stuff */
-    background-image: url('../images/background.png');
-    /* #380404 */
-    background-size: 13%;
-    background-repeat: repeat;
-    background-attachment: fixed;
-    background-position: center; /* Start tiling from the center */
-    /* cursor: url('path/to/your/cursor-image.png'), auto */
-}
-
-.contents {
-    /* height: 94%;
-    width: 60%; */
-    height: 657px;
-    width: 864px;
-    box-sizing: border-box;
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; */
- }
-
- /* ======= TOP ======= */
  .title-and-cat {
     display: flex;
-    width: auto;
-    height: 60%;
-    align-items: top;
-    justify-content: space-between;
-}
-
-.cat {
-    width: 40%;
-    height: 100%;
-}
-.title {
-    width: 55%;
-    height: 100%;
-    display: flex;
-    /* align-items:;
-    justify-content: center; */
-    flex-direction: column;
-}
-.name {
-    width: 516px;
-    height: 276px;
+    /* max-width: 1000px; */
+    justify-content: center;
+    width: 80%;
+    max-width: 2000px;
 }
 
 #fluffy {
-    /* width: 100%; */
-    width: 322px;
-    height: 394px;
-    object-fit: fill;
+    object-fit: contain;
     float: right;
+    width: 60vw;
+    height: auto;
+    padding-top: 3%;
 }
-#tinazhang {
-    height: 100%;
-    object-fit: fill;
+.title {
+    display: flex;
+    flex-direction: column;
+    padding-top: 8%;
+    /* justify-content: space-between; */
 }
 
-/* .title p {
-    /* margin-top: 1%;
-    margin-left: 2%;
-    font-size: 1.1rem;
+.highlight {
+                        position: relative;
+                        display: inline-block;
+                        font-size: inherit;
+                        color: inherit;
+                        --bg-size: 400%;
+                        --color-one: #f4bc73;
+                        --color-two: #e79f53;
+                        background: linear-gradient(90deg,var(--color-one),var(--color-two),var(--color-one)) 0 0 / var(--bg-size) 100%;
+                        color: transparent;
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        animation: move-bg 5s infinite linear reverse;
+                        -webkit-animation: move-bg 10s infinite linear reverse;
+}
+@keyframes move-bg {
+    to {
+      background-position: var(--bg-size) 0;
+    }
+  }
+
+.chatgpt {
+    color: inherit;
+    --bg-size: 600%; /* Increased background size for a more noticeable effect */
+    --color-one: #09b4d2;
+    --color-two: #11f4a0;
+    background: linear-gradient(135deg, var(--color-one), var(--color-two), var(--color-one)) 0 0 / var(--bg-size) 100%; /* Diagonal gradient for a more dynamic effect */
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: move-bg 7s infinite linear reverse; /* Slower animation for a smoother effect */
+    -webkit-animation: move-bg 7s infinite linear reverse;
+}
+
+/* .highlight .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: #FF8818;
+    z-index: -1;
+} */
+/* 
+.highlight:hover {
+    color: white;
 } */
 
- /* ======= BOTTOM ======= */
-.bottom {
+#arrow-shape::after {
+    transform: translate(-50%, -50%);
+  }
+
+
+
+h1 {
+    font-size: 4rem;
+    color: #46392F;
+    display: inline-block;
+    position: relative;
+}
+h1 span {
+    font-size: inherit;
+    color: inherit;
+    display: inline-block;
+    position: relative;
+}
+
+.split-line {
+    font-size: inherit;
+    display: inline-block;
+    overflow: hidden;  /* Ensure overflow is hidden to create the 'cut off' effect */
+  }
+
+p {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+svg {
+    width: 50%;
+    height: auto;
+    display: block; /* Remove any unwanted space below the SVG */
+  }
+
+.fluffy-intro {
     display: flex;
-    width: auto;
-    height: 35%;
+    flex-direction: column;
+}
+
+#arrow-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* Aligns children (items) to the right */
+    align-items: center; /* Optional: vertically centers the items */
+    padding-right: 10%;
+    box-sizing: border-box; /* Includes padding within the element's width */
+}
+
+h3 {
+    font-size: 2rem;
+    color: #46392F;
+    display: inline-block;
+    position: relative;
+}
+
+.content-block {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 6rem;
+    padding-left: 5%;
+    gap: 5%
+}
+
+.title-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+  .skills-container {
+    display: flex;
+    justify-content: space-evenly; /* Even spacing between the blocks */
+    align-items: flex-start;      /* Align titles at the top */
+    text-align: center;
+    gap: 2rem;
+    width: 100%;
+    padding-top: 1rem;
+    flex-wrap: wrap;
+    gap: clamp(0rem, 5vw, 2rem);  /* Scale the gap between skill blocks */
+  }
+  
+  .skill-block {
+    flex: 1;                      /* Make all blocks the same width */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: start;
+    gap: 0.3rem;
+  }
+  
+h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1m;
+    color: #46392F;
+  }
+
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    padding-top: 1rem;
+}
+
+.experience-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-exp-block {
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
 }
 
-.subbottom {
-    /* background-color: indigo; */
+.experience-title {
+    text-decoration: none;
+}
+
+.experience-content {
+    display: flex;
+    justify-content: space-between; /* Space between left and right content */
+    align-items: center;
+    margin-top: 5px;
+}
+
+.right-text {
+    margin: 0;
+    color: #888; /* Lighter color for the right text */
+    font-style: italic;
+    text-align: right; /* Aligns right text to the right */
+}
+
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    padding-top: 1rem;
+}
+.card {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    width: auto;
-    height: 100%;
+    gap: 1rem; /* Space between image/video and content */
+    width: 100%;
+}
+
+.card-image {
     width: 70%;
-    box-sizing: border-box;
-}
-
-#bottom-component {
-    /* background-color: green; */
-    flex: 1;
-    height: 100%;
-    width:30%;
-}
-
-#comp-flex {
-    /* background-color: blueviolet; */
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
-    flex-direction: column;
-    height: 100%;
-}
-
-.section-name {
-    width: 202px;
-}
-
-.icon {
-    height: 184px;
-}
-
-.contact {
-    /* background-color: orange; */
-    height: 100%;
-    width: 22%;
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-    flex-direction: column;
-}
-
-#contact-inner-group {
-    display: flex;
-    justify-content: center; /* Center the items horizontally within the inner container */
-    align-items: center; /* Center the items vertically within the inner container */
-    width: 100%; /* Optional width for the inner container */
-    height: 100%; /* Optional height for the inner container */
-    /* background-color:deeppink;  */
-    box-sizing: border-box;
-    flex-direction: column;
-}
-
-#contact-title {
-    /* background-color:indianred; */
-    width: 100%;
-    height: 30%;
-    display: flex;
-    align-items: flex-end;
-}
-
-#contact-title img {
-    width: 100%;
     height: auto;
+    object-fit: contain;
 }
 
-#info-inner-group {
-    width: 100%;
-    height: 50%;
+.card-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    height: 100%;
 }
 
-#contact-info {
-    height: 40%;
-    width: 100%;
+
+.contact-me {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-#text-box{
-    width: 70%;
-    /* white-space: normal; /* Ensures text will wrap */
-    /* word-wrap: break-word; */
-    overflow-wrap: break-word; 
-}
-#text-box a {
-    width: 100%;
-}
-
-img.icon-small {
-    height: 80%;
-    margin-right: 5%;
-}
-
-#curr {
-    padding: 2%;
-    margin-top: 3%;
-    margin-bottom: 5%;
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-}
-#curr img {
-    width: 35%;
-    margin-right: 2%;
-}
-
-.padding {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    height: 100vh;
-    width: 100wh;
- }
+    gap: 2rem;
+    width: 100%;
+    padding-top: 1rem;
+    justify-content: center;
+}
+
+/* Added Media Query */
+@media (max-width: 1300px) {
+    .title-and-cat {
+        flex-direction: column;
+    }
+    #fluffy {
+        width: 100%;
+    }
+    #arrow-container {
+        display: none;
+    }
+    .card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .content-block {
+        flex-direction: column; /* Stack the title-box and container vertically */
+        align-items: center;    /* Center the content-block items */
+    }
+
+    .title-box {
+        align-items: center;    /* Center content inside the title-box */
+        margin-bottom: 2rem;    /* Add space below the title-box */
+    }
+
+    .skills-container {
+        width: 100%;            /* Ensure the container stretches across the available width */
+        justify-content: center; /* Center the skill-blocks */
+    }
+}
