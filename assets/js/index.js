@@ -22,7 +22,6 @@ const title_timeline = gsap.timeline({
 
 // Add a 'split-line' class to each line
 h1_lines.lines.forEach((line, index) => {
-  console.log(line); // Verify lines are split correctly
   line.classList.add('split-line');
 });
 
@@ -83,7 +82,7 @@ fluffy_text.words.forEach((word, index) => {
   }); // Delay each word based on its index
 });
 
-title_timeline.from("#arrow-container", {
+title_timeline.from("#arrow-svg", {
     y: 20,          // Start below the original position
     opacity: 0,     // Start invisible
     delay: 0.5,

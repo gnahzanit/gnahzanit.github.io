@@ -18,7 +18,7 @@
     flex-direction: column;
     padding-top: 8%;
     padding-right: 2rem;
-    /* justify-content: space-between; */
+    justify-content: space-between;
 }
 
 .highlight {
@@ -105,8 +105,10 @@ a {
 
 svg {
     width: 40%;
+    max-width: 10rem;
     height: auto;
     display: block; /* Remove any unwanted space below the SVG */
+    padding-bottom: 20rem;
   }
 
 .fluffy-intro {
@@ -117,9 +119,9 @@ svg {
 #arrow-container {
     width: 100%;
     display: flex;
-    justify-content: center; /* Aligns children (items) to the right */
-    align-items: center; /* Optional: vertically centers the items */
-    padding-right: 30%;
+    align-items: flex-end; /* Optional: vertically centers the items */
+    flex-direction: column;
+    padding-right: 20%;
     box-sizing: border-box; /* Includes padding within the element's width */
 }
 
