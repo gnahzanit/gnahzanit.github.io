@@ -1,5 +1,5 @@
-import { gsap } from "gsap";
-import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+import gsap from "gsap";
+import MotionPathPlugin from "gsap/MotionPathPlugin";
 import anime from 'animejs/lib/anime.es.js';
 import ScrollTrigger from "gsap/ScrollTrigger";
 import SplitType from "split-type";
