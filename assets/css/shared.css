@@ -23,6 +23,11 @@
     color: #2c2824;
   }
 
+body {
+  background-color: white;
+
+}
+
 .cursor {
     background-image: url('../images/mouse/default-mouse.png');
     background-size: contain;
