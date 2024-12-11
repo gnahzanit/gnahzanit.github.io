@@ -288,6 +288,9 @@ h4 {
         width: 100%;
     }
     #arrow-container {
+        align-items: flex-start;
+    }
+    #arrow-svg {
         display: none;
     }
     .card {
