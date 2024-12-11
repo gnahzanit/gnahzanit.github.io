@@ -1,7 +1,7 @@
-import gsap from "gsap";
-import MotionPathPlugin from "gsap/MotionPathPlugin";
+import gsap from "../../node_modules/gsap";
+import MotionPathPlugin from "../../node_modules/gsap/MotionPathPlugin";
 import anime from 'animejs/lib/anime.es.js';
-import ScrollTrigger from "gsap/ScrollTrigger";
+import ScrollTrigger from "../../node_modules/gsap/ScrollTrigger";
 import SplitType from "split-type";
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
@@ -142,7 +142,6 @@ cards.forEach((card, index) => {
       start: "top 85%", // Animation starts when the card enters the viewport
       end: "bottom 10%", // Ends when the card nears the bottom
       scrub: false, // No scroll-scrubbing, plays on trigger
-      markers: true,
     },
     opacity: 0, // Fade in effect
     y: 50, // Slide up from 50px below
