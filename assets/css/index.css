@@ -2,7 +2,7 @@
     display: flex;
     /* max-width: 1000px; */
     justify-content: center;
-    width: 70%;
+    width: 75%;
     max-width: 2000px;
 }
 
@@ -17,6 +17,7 @@
     display: flex;
     flex-direction: column;
     padding-top: 8%;
+    padding-right: 2rem;
     /* justify-content: space-between; */
 }
 
@@ -26,13 +27,13 @@
                         font-size: inherit;
                         color: inherit;
                         --bg-size: 400%;
-                        --color-one: #f4bc73;
-                        --color-two: #e79f53;
+                        --color-one: #46392F;
+                        --color-two: #ff7300;
                         background: linear-gradient(90deg,var(--color-one),var(--color-two),var(--color-one)) 0 0 / var(--bg-size) 100%;
                         color: transparent;
                         background-clip: text;
                         -webkit-background-clip: text;
-                        animation: move-bg 5s infinite linear reverse;
+                        animation: move-bg 10s infinite ease-in-out reverse;
                         -webkit-animation: move-bg 10s infinite linear reverse;
 }
 @keyframes move-bg {
@@ -72,14 +73,13 @@
     transform: translate(-50%, -50%);
   }
 
-
-
 h1 {
     font-size: 4rem;
     color: #46392F;
     display: inline-block;
     position: relative;
     font-weight: 700;
+    line-height: 3.5rem;
 }
 h1 span {
     font-size: inherit;
@@ -97,10 +97,14 @@ h1 span {
 p {
     padding-left: 2px;
     padding-right: 2px;
+    font-size: 1.35rem;
+}
+a {
+    font-size: 1.35rem;
 }
 
 svg {
-    width: 50%;
+    width: 40%;
     height: auto;
     display: block; /* Remove any unwanted space below the SVG */
   }
@@ -113,9 +117,9 @@ svg {
 #arrow-container {
     width: 100%;
     display: flex;
-    justify-content: flex-end; /* Aligns children (items) to the right */
+    justify-content: center; /* Aligns children (items) to the right */
     align-items: center; /* Optional: vertically centers the items */
-    padding-right: 10%;
+    padding-right: 30%;
     box-sizing: border-box; /* Includes padding within the element's width */
 }
 
@@ -147,7 +151,6 @@ h3 {
     justify-content: space-evenly; /* Even spacing between the blocks */
     align-items: flex-start;      /* Align titles at the top */
     text-align: center;
-    gap: 2rem;
     width: 100%;
     padding-top: 1rem;
     flex-wrap: wrap;
@@ -165,7 +168,7 @@ h3 {
   
 h4 {
     margin-bottom: 0.5rem;
-    font-size: 1.1m;
+    font-size: 1.6rem;
     color: #46392F;
   }
 
@@ -223,6 +226,7 @@ h4 {
 
 .card-image {
     width: 70%;
+    max-width: 40rem;
     height: auto;
     object-fit: contain;
 }
@@ -233,14 +237,44 @@ h4 {
     height: 100%;
 }
 
-
 .contact-me {
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
     width: 100%;
-    padding-top: 1rem;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.contact-me-left {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.contact-me-right {
+    display: flex;
+    gap: clamp(0rem, 5vw, 2rem);  /* Scale the gap between skill blocks */
+}
+
+.right-cm-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-cm-block h4 {
+    margin-bottom: 10px;
+}
+
+.right-cm-block ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.right-cm-block a {
+    text-decoration: none;
+}
+
+.right-cm-block a:hover {
+    text-decoration: underline;
 }
 
 /* Added Media Query */
@@ -271,5 +305,13 @@ h4 {
     .skills-container {
         width: 100%;            /* Ensure the container stretches across the available width */
         justify-content: center; /* Center the skill-blocks */
+    }
+
+    * {
+        cursor: auto;
+    }
+
+    .cursor {
+        display: none;
     }
 }
