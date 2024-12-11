@@ -1,11 +1,4 @@
-import gsap from "../../node_modules/gsap";
-import MotionPathPlugin from "../../node_modules/gsap/MotionPathPlugin";
-import anime from 'animejs/lib/anime.es.js';
-import ScrollTrigger from "../../node_modules/gsap/ScrollTrigger";
-import SplitType from "split-type";
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
-
-
 
 // Initialize SplitType with the correct CSS selector
 const h1_lines = new SplitType("#title-text", { types: 'lines' });
