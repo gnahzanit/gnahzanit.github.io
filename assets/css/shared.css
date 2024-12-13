@@ -28,6 +28,21 @@ body {
 
 }
 
+canvas {
+  position: fixed; /* Ensure it stays in the same position */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  z-index: -1; /* Push it to the background */
+  pointer-events: none; /* Prevent the canvas from intercepting mouse events */
+}
+
+.dot {
+  color: white;
+}
+
+
 .cursor {
     background-image: url('../images/mouse/default-mouse.png');
     background-size: contain;

@@ -117,9 +117,6 @@ title_timeline.from("#arrow-svg", {
   });
 
 
-// Register ScrollTrigger plugin
-gsap.registerPlugin(ScrollTrigger);
-
 // Create a GSAP timeline
 const timeline = gsap.timeline();
 
@@ -131,13 +128,13 @@ cards.forEach((card, index) => {
   gsap.from(card, {
     scrollTrigger: {
       trigger: card, // Each card acts as its own trigger
-      start: "top 85%", // Animation starts when the card enters the viewport
-      end: "bottom 10%", // Ends when the card nears the bottom
-      scrub: false, // No scroll-scrubbing, plays on trigger
+      start: "top bottom", // Trigger when the card enters the bottom of the viewport
+      end: "top 85%", // End near the top of the viewport
+      once: true, // Ensures the animation runs only once
     },
     opacity: 0, // Fade in effect
     y: 50, // Slide up from 50px below
-    duration: 0.3, // Slightly increased duration for smoother effect
+    duration: 0.3, // Smooth animation duration
     ease: "power3.out", // Smooth easing
   });
 });
