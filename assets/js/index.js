@@ -1,6 +1,7 @@
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
-// Initialize SplitType with the correct CSS selector
+window.addEventListener("load", (event) => {
+  // Initialize SplitType with the correct CSS selector
 const h1_lines = new SplitType("#title-text", { types: 'lines' });
 
 // GSAP timeline to animate each line
@@ -139,7 +140,7 @@ cards.forEach((card, index) => {
   });
 });
 
-
+});
 
 function blinkCat() {
     const image = document.getElementById('fluffy');
