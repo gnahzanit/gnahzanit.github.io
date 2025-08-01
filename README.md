@@ -1,2 +1,1 @@
-## ALL WORKS ARE MY OWN © TINA ZHANG 2024 <br>
-Under GitHub's [Non-License Policy](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository#what-happens-if-i-dont-choose-a-license) and U.S. copyright law, unauthorized use, distribution, or reproduction of any materials contained in this repository is strictly prohibited without explicit permission from the owner.
+
